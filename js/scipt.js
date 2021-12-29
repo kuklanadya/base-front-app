@@ -1,6 +1,13 @@
 const generateButton = document.querySelector('.generate');
 let select = document.querySelector('.select');
 let arrayTh = document.querySelectorAll('th');
+let form = document.querySelector('form');
+
+form.addEventListener('input', function () {
+   let num = document.querySelector('.numout');
+   let usernum = document.querySelector('.numin');
+   num.value = usernum.valueAsNumber;
+})
 
 
 select.addEventListener('click', function () {
@@ -137,4 +144,3 @@ function createTable(number, data) {
       })
    })
 }
-
